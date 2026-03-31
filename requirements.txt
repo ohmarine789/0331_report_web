@@ -12,3 +12,4 @@ chromadb
 google-genai
 google-auth-oauthlib
 google-auth
+langchain-huggingface
