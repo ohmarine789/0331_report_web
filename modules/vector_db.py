@@ -5,9 +5,9 @@ import os
 import re   # 정규화
 import pandas as pd
 # 성공했던 모델을 쓰기 위해 추가
-from langchain_huggingface import HuggingFaceEmbeddings   # 에러시 수정
-from langchain_chroma import Chroma                       # 에러시 수정
-from langchain_core.documents import Document             # 에러시 수정
+from langchain_huggingface import HuggingFaceEmbeddings   # 수정
+from langchain_chroma import Chroma                       # 수정
+from langchain_core.documents import Document             # 수정
 from dotenv import load_dotenv
 
 load_dotenv()
