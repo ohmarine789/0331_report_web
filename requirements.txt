@@ -13,3 +13,4 @@ google-genai
 google-auth-oauthlib
 google-auth
 langchain-huggingface
+protobuf==3.20.3
