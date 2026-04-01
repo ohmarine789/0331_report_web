@@ -1,13 +1,14 @@
 import streamlit as st
 import pandas as pd
-from modules.data_manager import SheetManager
-from modules.visualizer import SkinVisualizer
-from pages.form.normal import show_normal_form
+from modules.data_manager import SheetManager   # 데이터로딩 및 저장
+from modules.visualizer import SkinVisualizer   # 시각화
+from pages.form.normal import show_normal_form  # 폼인터페이스 가죠오기
+from pages.form.faq import show_faq_form        # 폼인터페이스 가죠오기
 # app.py 상단에 추가
-from modules.chatbot import SkinChatbot
+from modules.chatbot import SkinChatbot   # 쳇봇
 
 
-@st.cache_data(ttl=300)
+@st.cache_data(ttl=300)   # 
 def load_data():
     db = SheetManager()
     return db.get_all_responses_df()
@@ -197,6 +198,8 @@ def main():
 
     elif menu == "AI Prediction":
         st.write("## 🤖 AI 분석 리포트 (준비 중)")
+        show_faq_form()
+       
     # 🔥 쳇봇 UI를 메인 루프 마지막에 한 번만 호출
     render_chatbot_ui()
 
